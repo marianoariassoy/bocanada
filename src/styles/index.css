@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #150a34;
+  --color-secondary: #c6c6c6;
+}
+body {
+  color: var(--color-primary);
+  accent-color: var(--color-1);
+  font-optical-sizing: auto;
+}
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+.text-primary-hover:hover {
+  color: var(--color-primary);
+}
+.bg-primary-hover:hover {
+  background-color: var(--color-primary);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.border-primary {
+  border-color: var(--color-primary);
+}
+.bg-gray-100 {
+  background-color: #dadada;
+}
+
+.indicators {
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+  bottom: 2rem;
+  left: 0;
+}
+.indicators li {
+  margin: 0 0.3rem !important;
+  text-align: center;
+}
+.indicators li button::before {
+  background: white !important;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: var(--color-primary);
+}
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--color-primary);
+  transform-origin: bottom left;
+  transition: transform 0.1s ease-out;
+}
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+#servicios {
+  padding-top: 40vh;
+}
+.fixed-top {
+  position: fixed;
+  top: 0;
+}

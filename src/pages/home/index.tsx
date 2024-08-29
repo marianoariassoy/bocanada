@@ -10,7 +10,7 @@ const Index = () => {
   const [location] = useLocation()
 
   useEffect(() => {
-    document.title = 'Bocanada - Valores'
+    document.title = 'Bocana - Valores'
 
     if (location === '/') return
     const target = location.replace('/', '#') as string

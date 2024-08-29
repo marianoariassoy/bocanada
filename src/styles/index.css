@@ -38,7 +38,6 @@ body {
 .bg-gray-100 {
   background-color: #dadada;
 }
-
 .indicators {
   position: absolute;
   width: 100%;
@@ -53,7 +52,6 @@ body {
 .indicators li button::before {
   background: white !important;
 }
-
 .hover-underline-animation {
   display: inline-block;
   position: relative;

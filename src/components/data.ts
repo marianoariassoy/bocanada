@@ -44,7 +44,7 @@ export const dataContact = {
     send: 'Enviar',
     thanks: '¡Su mensaje fue enviado!',
     thanks2: '¡Tus datos fueron enviados!',
-    error: 'Se produjo un error al enviar el mensaje :-(',
+    error: 'Se produjo un error al enviar el mensaje',
     required: 'Por favor complete este dato'
   }
 }

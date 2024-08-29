@@ -30,7 +30,7 @@ const Form = () => {
   const onSubmit = (data: FieldsetHTMLAttributes<Inputs>) => {
     setSending(true)
 
-    axios.post(' ', { ...data }).then(data => {
+    axios.post('https://bocanavalores.com/backend/send-email.php', { ...data }).then(data => {
       if (data.data === 'success') {
         setSended(true)
         setSending(false)
@@ -48,9 +48,9 @@ const Form = () => {
   return (
     <>
       {error ? (
-        <div className='text-2xl text-center font-bold'>{dataContact[lan].error}</div>
+        <div className='text-xl text-center font-medium'>{dataContact[lan].error}</div>
       ) : sended ? (
-        <div className='text-3xl text-center font-bold'>{dataContact[lan].thanks}</div>
+        <div className='text-xl text-center font-medium'>{dataContact[lan].thanks}</div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className='grid grid-cols-2 gap-4 text-sm lg:text-base'>

@@ -17,7 +17,7 @@ const Servicios = () => {
       <div className='absolute bg-primary h-full inset-0 -z-10'>
         <div className='w-full h-[60vh]'>
           <img
-            src='/assets/hero.jpg'
+            src='https://bocanavalores.com/backend/images-static/portada.jpg'
             className='object-cover object-center h-full w-full'
           />
         </div>

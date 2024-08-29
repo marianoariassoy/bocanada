@@ -22,10 +22,11 @@ const Index = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
+  }, [data])
 
   if (data) {
     dataFiltered = data.filter(item => item.id === +id)
+    document.title = `Bocana - ${dataFiltered[0].title}`
   }
 
   return (

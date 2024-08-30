@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 interface Props {
   data: {
@@ -7,13 +8,27 @@ interface Props {
     text: string
     icon: string
   }
+  index: number
 }
 
-const ServiciosItem = ({ data }: Props) => {
+const ServiciosItem = ({ data, index }: Props) => {
   const [more, setMore] = useState(false)
 
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.3
+  })
+
   return (
-    <article className='flex flex-col gap-y-6 text-primary bg-white p-6 lg:p-8 rounded-2xl border border-primary'>
+    <article
+      className={`flex flex-col gap-y-6 text-primary bg-white p-6 lg:p-8 rounded-2xl border border-primary ${
+        inView ? 'animate-fade-up' : 'opacity-0'
+      } ${index === 1 && 'animate-delay-500'} ${index === 2 && 'animate-delay-1000'} ${
+        index === 3 && 'animate-delay-[1500ms]'
+      }
+      }`}
+      ref={ref}
+    >
       <div className='flex flex-col items-center gap-y-3 border-b-2 border-primary pb-6'>
         <div className='h-16 flex items-center p-2'>
           <img

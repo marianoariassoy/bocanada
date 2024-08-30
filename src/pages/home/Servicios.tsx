@@ -1,6 +1,8 @@
 import ServiciosItem from './ServiciosItem'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
+import Image from '../../components/Image'
+import { useInView } from 'react-intersection-observer'
 
 interface Props {
   id: number
@@ -12,13 +14,21 @@ interface Props {
 const Servicios = () => {
   const { data, loading } = useFetch<Props[]>(`/servicios`)
 
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.3
+  })
+
   return (
     <>
-      <div className='absolute bg-primary h-full inset-0 -z-10'>
+      <div
+        className={`absolute bg-primary h-full inset-0 -z-10 ${inView ? 'animate-fade-down' : 'opacity-0'}`}
+        ref={ref}
+      >
         <div className='w-full h-[60vh]'>
-          <img
+          <Image
             src='https://bocanavalores.com/backend/images-static/portada.jpg'
-            className='object-cover object-center h-full w-full'
+            alt='portada'
           />
         </div>
       </div>
@@ -29,10 +39,11 @@ const Servicios = () => {
       ) : (
         <div className='mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-4 gap-6 px-6'>
           {data &&
-            data.map(item => (
+            data.map((item, index) => (
               <ServiciosItem
                 key={item.id}
                 data={item}
+                index={index}
               />
             ))}
         </div>

@@ -15,7 +15,7 @@ const Menu = () => {
 
   return (
     <div
-      className='hidden fade-in fixed top-0 left-0 w-screen h-screen bg-primary p-12 z-50 text-white'
+      className='hidden fade-in fixed top-0 left-0 w-screen h-screen bg-gray-100 p-12 z-50 text-primary'
       id='menu'
     >
       <button
@@ -27,7 +27,7 @@ const Menu = () => {
       <div className='flex flex-col items-center justify-between gap-y-6 h-full'>
         <Logo />
         <nav>
-          <ul className='flex flex-col items-center gap-y-6 font-medium'>
+          <ul className='flex flex-col items-center gap-y-10 font-bold'>
             {menu.map((item, index) => (
               <li key={index}>
                 <Link

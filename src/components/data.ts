@@ -9,10 +9,10 @@ export const menu = [
     title: 'Novedades',
     path: '#novedades'
   },
-  {
-    title: 'Nuestros Clientes',
-    path: '#clientes'
-  },
+  // {
+  //   title: 'Nuestros Clientes',
+  //   path: '#clientes'
+  // },
   {
     title: 'Contacto',
     path: '#contacto'

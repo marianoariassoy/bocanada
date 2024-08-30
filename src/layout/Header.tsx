@@ -1,9 +1,13 @@
+import { Link } from 'wouter'
 import { Logo } from '../components/icons'
 import Social from './Social'
 import Bars from './Bars'
 import Nav from './Nav'
+import useHome from '../utils/useHome'
 
 const Header = () => {
+  const ishome = useHome()
+
   return (
     <header className='sticky top-0 z-50'>
       <div className='bg-gray-100 text-black/50 text-center px-6 py-4 text-sm'>
@@ -26,12 +30,12 @@ const Header = () => {
         id='header'
       >
         <div className='basis-0'>
-          <a
-            href='#servicios'
+          <Link
+            href={ishome ? '#servicios' : '/servicios'}
             className='hover:text-black/50 transition-colors logo scroll'
           >
             <Logo />
-          </a>
+          </Link>
         </div>
         <div className='flex-1 justify-center hidden lg:flex'>
           <Nav />

@@ -22,7 +22,7 @@ const Index = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [data])
+  }, [id])
 
   if (data) {
     dataFiltered = data.filter(item => item.id === +id)
@@ -43,13 +43,13 @@ const Index = () => {
             <section className='fade-in pb-12'>
               <div className='m-auto max-w-7xl px-6 py-6 lg:py-12 flex flex-col gap-y-6 lg:gap-y-12'>
                 <div className='flex justify-between gap-x-3 items-end py-6 border-b-2 border-primary font-medium'>
-                  <div>
+                  <div className='flex-1'>
                     <h1 className='text-2xl lg:text-4xl'>{dataFiltered[0].title}</h1>
                   </div>
-                  <div className='lg:text-2xl'>{dataFiltered[0].date}</div>
+                  <div className='text-xl lg:text-2xl'>{dataFiltered[0].date}</div>
                 </div>
                 <div className='flex flex-col lg:flex-row gap-x-20 gap-y-12'>
-                  <div className='lg:w-4/6 text-black/50 text-sm lg:text-base'>
+                  <div className='lg:w-4/6 text-black/70 text-sm lg:text-base'>
                     <HTML text={dataFiltered[0].text} />
                   </div>
                   <div className='lg:w-2/6'>

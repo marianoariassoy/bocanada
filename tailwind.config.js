@@ -6,5 +6,5 @@ export default {
       sans: 'Poppins, sans-serif'
     }
   },
-  plugins: []
+  plugins: [require('tailwindcss-animated')]
 }

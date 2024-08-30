@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'wouter'
 import Layout from '../../layout/Layout'
-import Clientes from './Clientes'
+// import Clientes from './Clientes'
 import Contacto from './Contacto'
 import Novedades from './Novedades'
 import Servicios from './Servicios'
@@ -32,9 +32,9 @@ const Index = () => {
       <section id='novedades'>
         <Novedades />
       </section>
-      <section id='clientes'>
+      {/* <section id='clientes'>
         <Clientes />
-      </section>
+      </section> */}
       <section id='contacto'>
         <Contacto />
       </section>

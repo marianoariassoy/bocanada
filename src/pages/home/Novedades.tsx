@@ -27,11 +27,12 @@ const Novedades = () => {
         ) : (
           data && (
             <>
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-y-6 gap-x-16'>
-                {data.slice(0, show).map(item => (
+              <div className='grid lg:grid-cols-2 gap-y-6 gap-x-16'>
+                {data.slice(0, show).map((item, index) => (
                   <NovedadesItem
                     key={item.id}
                     data={item}
+                    index={index}
                   />
                 ))}
               </div>
@@ -45,13 +46,15 @@ const Novedades = () => {
                     Más Novedades
                   </button>
                 ) : (
-                  <button
-                    onClick={() => setShow(prev => prev - 2)}
-                    className='bg-primary py-2 px-12 text-white rounded-lg border-2 border-primary hover:bg-white 
+                  show >= 4 && (
+                    <button
+                      onClick={() => setShow(prev => prev - 2)}
+                      className='bg-primary py-2 px-12 text-white rounded-lg border-2 border-primary hover:bg-white 
            text-primary-hover transition-colors font-medium'
-                  >
-                    Menos Novedades
-                  </button>
+                    >
+                      Menos Novedades
+                    </button>
+                  )
                 )}
               </div>
             </>

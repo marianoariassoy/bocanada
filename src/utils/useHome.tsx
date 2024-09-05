@@ -8,7 +8,8 @@ const useHome = () => {
     location === '/servicios' ||
     location === '/novedades' ||
     location === '/contacto' ||
-    location === '/clientes'
+    location === '/clientes' ||
+    location === '/quienes-somos'
 
   return ishome
 }

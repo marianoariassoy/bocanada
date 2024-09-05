@@ -21,7 +21,7 @@ const ServiciosItem = ({ data, index }: Props) => {
 
   return (
     <article
-      className={`flex flex-col gap-y-6 text-primary bg-white p-6 lg:p-8 rounded-2xl border border-primary ${
+      className={`flex flex-col gap-y-6 text-primary bg-white p-6 lg:p-8 rounded-2xl  ${
         inView ? 'animate-fade-up' : 'opacity-0'
       } ${index === 1 && 'animate-delay-500'} ${index === 2 && 'animate-delay-1000'} ${
         index === 3 && 'animate-delay-[1500ms]'

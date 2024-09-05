@@ -12,6 +12,11 @@ body {
   accent-color: var(--color-1);
   font-optical-sizing: auto;
 }
+@media screen and (max-width: 940px) {
+  .text-4xl {
+    font-size: 1.8rem;
+  }
+}
 #root {
   display: grid;
   grid-template-rows: auto 1fr auto;

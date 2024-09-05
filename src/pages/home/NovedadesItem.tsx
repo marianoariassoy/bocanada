@@ -31,7 +31,7 @@ const NovedadesItem = ({ data, index }: Props) => {
     >
       <div className='flex justify-between gap-x-6 items-end px-6 py-4 border-b-2 border-primary font-medium'>
         <div className='flex-1'>
-          <h1 className='text-xl'>{data.title}</h1>
+          <h1 className='text-xl leading-6'>{data.title}</h1>
         </div>
         <div>{data.date}</div>
       </div>

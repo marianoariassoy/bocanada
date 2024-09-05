@@ -6,13 +6,13 @@ export const menu = [
     path: '#servicios'
   },
   {
+    title: 'Quienes Somos?',
+    path: '#quienes-somos'
+  },
+  {
     title: 'Novedades',
     path: '#novedades'
   },
-  // {
-  //   title: 'Nuestros Clientes',
-  //   path: '#clientes'
-  // },
   {
     title: 'Contacto',
     path: '#contacto'

@@ -5,6 +5,7 @@ import Layout from '../../layout/Layout'
 import Contacto from './Contacto'
 import Novedades from './Novedades'
 import Servicios from './Servicios'
+import Nosotros from './Nosotros'
 
 const Index = () => {
   const [location] = useLocation()
@@ -28,6 +29,9 @@ const Index = () => {
         id='servicios'
       >
         <Servicios />
+      </section>
+      <section id='quienes-somos'>
+        <Nosotros />
       </section>
       <section id='novedades'>
         <Novedades />

@@ -16,7 +16,7 @@ const Novedades = () => {
 
   return (
     <div className='text-primary'>
-      <div className='w-full mx-auto max-w-7xl py-20 px-6 flex flex-col items-center gap-y-16'>
+      <div className='w-full mx-auto max-w-7xl pt-20 px-6 flex flex-col items-center gap-y-16'>
         <div>
           <h1 className='font-semibold text-4xl'>Novedades</h1>
         </div>
